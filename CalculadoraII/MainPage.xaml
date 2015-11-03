@@ -23,32 +23,47 @@
 
         <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
             
-            <TextBox Margin="10" InputScope="Number" PlaceholderText="Numero 1"/>
-            <TextBox Margin="10" InputScope="Number" PlaceholderText="Numero 2"/>
+            <TextBox 
+                x:Name="num1"
+                Margin="10" InputScope="Number" 
+                PlaceholderText="Numero 1"/>
+            <TextBox 
+                x:Name="num2"
+                Margin="10" InputScope="Number" 
+                PlaceholderText="Numero 2"/>
             
         </StackPanel>
 
-        <Button Grid.Row="2" Grid.Column="2" Content="Sumar" 
-                Background="Red" Foreground="White" Width="110"
-                Height="110" HorizontalAlignment="Center"
-                FontSize="20"
-                />
-        <Button Grid.Row="3" Grid.Column="2" Content="Restart" 
-                Background="Red" Foreground="White" Width="110"
-                Height="110" HorizontalAlignment="Center"
-                FontSize="20"
-                />
-        <Button Grid.Row="3" Grid.Column="1" Content="Mul" 
-                Background="Red" Foreground="White" Width="110"
-                Height="110" HorizontalAlignment="Center"
-                FontSize="20"
-                />
-        <Button Grid.Row="3" Grid.Column="0" Content="Dividir" 
-                Background="Red" Foreground="White" Width="110"
-                Height="110" HorizontalAlignment="Center"
-                FontSize="20"
-                />
+        <Button 
+            x:Name="sumar"
+            Grid.Row="2" Grid.Column="2" Content="Sumar" 
+            Background="Red" Foreground="White" Width="110"
+            Height="110" HorizontalAlignment="Center"
+            FontSize="20" Click="operar"
+            />
+        <Button 
+            x:Name="restar"
+            Grid.Row="3" Grid.Column="2" Content="Restart" 
+            Background="Red" Foreground="White" Width="110"
+            Height="110" HorizontalAlignment="Center"
+            FontSize="20" Click="operar"
+            />
+        <Button 
+            x:Name="mul"
+            Grid.Row="3" Grid.Column="1" Content="Mul" 
+            Background="Red" Foreground="White" Width="110"
+            Height="110" HorizontalAlignment="Center"
+            FontSize="20"  Click="operar"
+            />
+        <Button 
+            x:Name="div"
+            Grid.Row="3" Grid.Column="0" Content="Dividir" 
+            Background="Red" Foreground="White" Width="110"
+            Height="110" HorizontalAlignment="Center"
+            FontSize="20" Click="operar"
+            />
         <TextBlock
+            x:Name="result"    
             Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2"
             Text="00" TextAlignment="Center" VerticalAlignment="Center"
             FontSize="150"

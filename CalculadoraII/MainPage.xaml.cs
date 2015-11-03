@@ -17,14 +17,39 @@ using Windows.UI.Xaml.Navigation;
 
 namespace CalculadoraII
 {
-    /// <summary>
-    /// Página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void operar(object sender, RoutedEventArgs e)
+        {
+            string n1 = num1.Text;
+            string n2 = num2.Text;
+
+            int nu1 = Convert.ToInt16(n1);
+            int nu2 = Convert.ToInt16(n2);
+            int nuRta = 0;
+
+            Button btnSender = sender as Button;
+            switch (btnSender.Name) {
+                case "sumar":
+                    nuRta = nu1 + nu2;
+                    break;
+                case "restar":
+                    nuRta = nu1 - nu2;
+                    break;
+                case "mul":
+                    nuRta = nu1 * nu2;
+                    break;
+                case "div":
+                    nuRta = nu1 / nu2;
+                    break;
+            }
+
+            result.Text = nuRta.ToString();
         }
     }
 }
